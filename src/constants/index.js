@@ -1,7 +1,6 @@
 import {
     mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
@@ -13,16 +12,14 @@ import {
     nodejs,
     mongodb,
     git,
-    figma,
-    docker,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    hotel,
+    twogood,
+    food,
+  
   } from "../assets";
   
   export const navLinks = [
@@ -46,17 +43,14 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
       title: "Backend Developer",
       icon: backend,
     },
-    {
-      title: "Content Creator",
-      icon: creator,
-    },
+
   ];
   
   const technologies = [
@@ -97,21 +91,10 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+
   ];
   
   const experiences = [
@@ -198,9 +181,9 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "hotel booking",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to search, book, and manage hotel's room from various providers , with fully functional admin panel to manage booking.",
       tags: [
         {
           name: "react",
@@ -215,13 +198,14 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: hotel,
+      link:"https://anywwhere.netlify.app/",
+      source_code_link: "https://github.com/prashanttc/hbs",
     },
     {
-      name: "Job IT",
+      name: "food delivery",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Web application that enables users to search for restaurant ,order food ,manage their own restaurtan and track order in real time with auth0 authentication and stripe payment.",
       tags: [
         {
           name: "react",
@@ -232,33 +216,39 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "stripe",
           color: "pink-text-gradient",
         },
+        {
+          name: "auth0",
+          color: "blue-text-gradient",
+        },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: food,
+      link:"https://easyeats-0pja.onrender.com",
+      source_code_link:"https://github.com/prashanttc/food-del",
     },
     {
-      name: "Trip Guide",
+      name: "Two good co",
+      link:"https://prashanttc.github.io/two-good-co/",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "A interactive and responsive homepage of a catering service company.",
       tags: [
         {
-          name: "nextjs",
+          name: "html",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "css",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "javascript",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: twogood,
+      source_code_link: "https://github.com/two-good-co",
     },
   ];
   

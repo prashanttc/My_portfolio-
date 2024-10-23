@@ -5,9 +5,9 @@ import { technologies } from '../constants';
 
 const Tech = () => {
   return (
-    <div className='flex flex-row  flex-wrap justify-center gap-10'>
+    <div className='flex flex-row md:mx-32  flex-wrap justify-center gap-10'>
       {technologies.map((technologies)=>(
-        <div className='w-28 h-28' key={technologies.name}>
+        <div className='md:w-28 md:h-28 w-16 h-16' key={technologies.name}>
 <BallCanvas icon={technologies.icon}/>
         </div>
       ))}
@@ -15,4 +15,4 @@ const Tech = () => {
   )
 }
 
-export default Tech
+export default SectionWrapper(Tech,"tech")

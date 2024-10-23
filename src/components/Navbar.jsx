@@ -16,8 +16,8 @@ onClick={
     setActive("");
   window.scrollTo(0,0)
   }}>
-<img src={logo} alt="logo" className='w-9 h-9 object-contain' />
-<p className='text-white flex text-[18px] font-bold cursor-pointer'>Prashant &nbsp;<span className='hidden sm:flex'>Chouhan</span> </p>
+<img src={logo} alt="logo" className='w-12 h-12 rounded-full object-contain' />
+<p className='text-white flex text-[18px]  font-bold cursor-pointer'>Prashant &nbsp;<span className='hidden sm:flex'>Chouhan</span> </p>
 </Link>
 <ul className='hidden sm:flex flex-row gap-10 list-none'>
   {navLinks.map((link)=>(

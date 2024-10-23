@@ -33,10 +33,10 @@ const About = () => {
     <p className={`${styles.sectionSubText}`}>Introduction</p>
     <p className={`${styles.sectionHeadText}`}>Overview</p>
    </motion.div>
-   <motion.p variants={fadeIn("","",0.1,1)} className='mt-4 leading-[30px] text-secondary text-[17px] max-w-3xl'>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam non nisi repellendus tenetur repudiandae. Est tenetur dolor consequuntur, deserunt assumenda impedit maiores harum enim officia quaerat eos eum at commodi facilis vitae aperiam debitis veritatis totam expedita placeat repellendus molestias iure! Vel, sapiente omnis.
+   <motion.p variants={fadeIn("","",0.1,1)} className='mt-4 leading-[30px] text-secondary text-[17px] max-w-4xl'>
+   I am a full-stack developer based in Indore, India, dedicated to building innovative and dynamic web applications. With a strong foundation in both front-end and back-end technologies, I specialize in using frameworks like React and Node.js, along with Express for server-side development. My interests extend to machine learning, where I explore predictive analytics to enhance user experiences and drive informed decision-making.
    </motion.p>
-   <div className='mt-20 flex flex-row flex-wrap gap-10'>
+   <div className='mt-20 flex flex-row flex-wrap md:ml-32 gap-10'>
     {services.map((service, index)=>(
 <ServiceCard key={service} index={index} {...service} />
     ))}
