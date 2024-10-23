@@ -16,7 +16,7 @@ const Computers = ({ isMobile }) => {
       penumbra={1}
       intensity={isMobile ? 0.8 : 1} // Adjusted intensity for mobile
       castShadow
-      shadow-mapSize={1024}
+      shadow-mapSize={isMobile?528:1024}
     />
     <pointLight 
       position={isMobile ? [0, 5, 2] : [0, 10, 0]} // Adjusted position for mobile
