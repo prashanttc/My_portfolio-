@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-    <hemisphereLight intensity={isMobile ? 0.2 : 5} groundColor='black' />
+    <hemisphereLight intensity={6} groundColor='black' />
     <primitive
       object={computer.scene}
       scale={isMobile ?2 : 3}
@@ -59,10 +59,8 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <Computers isMobile={isMobile} />
-      
-
+      </Suspense>  
       <Preload all />
-      </Suspense>
     </Canvas>
   );
 };
