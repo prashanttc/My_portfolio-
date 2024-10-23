@@ -23,8 +23,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-          <ComputerCanvas />
+<div className="bg-red-500 h-screen" > <ComputerCanvas /></div>
+         
   
       <div className="absolute xs:bottom-10 bottom-[20px] w-full flex items-start justify-center">
         <a href="#about">
