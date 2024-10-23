@@ -1,54 +1,27 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, SpotLight, useGLTF } from '@react-three/drei';
-
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('/computer.glb');
-  
+
   return (
     <mesh receiveShadow castShadow>
-      {/* Use simpler lighting for better performance */}
-      <hemisphereLight 
-        intensity={0.35} 
-        groundColor="gray" 
-        skyColor="#ffffff"
-      />
-      <ambientLight intensity={isMobile ? 0.3 : 0.5} color="#ffffff" />
-      
-      {/* Adjust point light intensity and shadow quality for mobile */}
-      <pointLight 
-        position={[10, 10, 10]} 
-        intensity={isMobile ? 0.8 : 1.5} 
-        color="#ffffff" 
-        castShadow
-      />
-      
-      {/* Simplified spot light settings for mobile */}
-      <SpotLight 
-        position={[0, 20, 10]}  
-        angle={0.3}
-        penumbra={0.5}
-        intensity={isMobile ? 1 : 2.5}
-        castShadow
-        shadow-mapSize={isMobile ? 512 : 1024} 
-        color="#f8e6a0"
-      />
-      
-      {/* Simplify directional light settings */}
+      {/* Use simplified lighting */}
+      <ambientLight intensity={isMobile ? 0.2 : 0.5} color="#ffffff" />
       <directionalLight 
-        position={[5, 10, 5]} 
-        intensity={isMobile ? 0.3 : 0.8} 
-        shadow-mapSize={isMobile ? 512 : 1024}
+        position={[0, 10, 5]} 
+        intensity={isMobile ? 0.3 : 0.6} 
         castShadow 
+        shadow-mapSize={isMobile ? 256 : 512}
       />
       
-      {/* Adjust scale, position, and rotation for mobile */}
+      {/* Adjust scale and position for mobile */}
       <primitive 
         object={computer.scene} 
-        scale={isMobile ? 0.4 : 0.75} 
-        position={isMobile ? [0, -2.5, -1.5] : [0, -3.5, -1.0]} 
+        scale={isMobile ? 0.3 : 0.6} 
+        position={isMobile ? [0, -2, -0.5] : [0, -3, -1]} 
         rotation={[-0.01, -0.2, -0.1]} 
         receiveShadow
         castShadow
@@ -76,16 +49,15 @@ const ComputerCanvas = () => {
 
   return (
     <Canvas 
-    frameloop="demand" 
-    shadows={isMobile ? false : true} 
-    camera={{ position: [20, 3, 5], fov: 25 }} 
-    gl={{ preserveDrawingBuffer: true }}
-  >
-  
+      frameloop="demand" 
+      shadows={!isMobile} 
+      camera={{ position: [20, 3, 5], fov: 25 }} 
+      gl={{ preserveDrawingBuffer: true, antialias: false }} // Turn off antialiasing
+    >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
           enableZoom={false} 
-          maxPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2} 
           minPolarAngle={Math.PI / 2} 
         />
         <Computers isMobile={isMobile} />
