@@ -9,23 +9,26 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
-    </mesh>
+    <hemisphereLight intensity={7} groundColor='black' />
+    <spotLight
+      position={isMobile ? [-10, 30, 5] : [-10, 10, 0]} // Adjusted positions
+      angle={0.12}
+      penumbra={1}
+      intensity={1} // Adjusted intensity for mobile
+      castShadow
+      shadow-mapSize={1024}
+    />
+    <pointLight 
+      position={isMobile ? [0, 5, 2] : [0, 10, 0]} // Adjusted position for mobile
+      intensity={2} // Adjusted intensity for mobile
+    />
+    <primitive
+      object={computer.scene}
+      scale={isMobile ? 2 : 3}
+      position={isMobile ? [0, -3, -1] : [0, -3.25, -1.5]}
+      rotation={[-0.01, -0.2, -0.1]}
+    />
+  </mesh>
   );
 };
 
@@ -55,6 +58,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
+     
       frameloop='demand'
       shadows
       dpr={[1, 2]}
@@ -63,14 +67,16 @@ const ComputersCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
         <Computers isMobile={isMobile} />
-      </Suspense>
+      
 
       <Preload all />
+      </Suspense>
     </Canvas>
   );
 };
