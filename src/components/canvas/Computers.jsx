@@ -75,15 +75,34 @@ const ComputerCanvas = () => {
   }, []);
 
   return (
-    <Canvas frameloop="demand" shadows camera={{ position: [20, 3, 5], fov: 25 }} gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls 
-          enableZoom={false} 
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2} 
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <Canvas 
+    frameloop="demand" 
+    shadows={isMobile ? false : true} 
+    camera={{ position: [20, 3, 5], fov: 25 }} 
+    gl={{ preserveDrawingBuffer: true }}
+  >
+  
+  <Suspense fallback={<CanvasLoader />}>
+  <OrbitControls 
+    enableZoom={false} 
+    maxPolarAngle={Math.PI / 2}
+    minPolarAngle={Math.PI / 2} 
+  />
+  {computer.scene ? (
+    <primitive 
+      object={computer.scene} 
+      scale={isMobile ? 0.4 : 0.75} 
+      position={isMobile ? [0, -2.5, -1.5] : [0, -3.5, -1.0]} 
+      rotation={[-0.01, -0.2, -0.1]} 
+    />
+  ) : (
+    <mesh>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="gray" />
+    </mesh>
+  )}
+</Suspense>
+
       <Preload all />
     </Canvas>
   );
