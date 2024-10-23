@@ -18,7 +18,7 @@ const EarthCanvas = () => {
   });
 
   return (
-    <div ref={ref} className="w-full h-auto">
+    <span ref={ref} className="">
       {inView && (
         <Canvas
           shadows
@@ -45,7 +45,7 @@ const EarthCanvas = () => {
           </Suspense>
         </Canvas>
       )}
-    </div>
+    </span>
   );
 };
 

@@ -99,57 +99,30 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "Self-Directed Projects",
+      company_name: "mern stack",
+      icon: reactjs,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "March 2024 - october 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Full Stack Development.",
+        " Developed a hotel booking website as a part of a personal project. Implemented features such as user authentication, booking management, and payment integration using technologies like Node.js, Express, MongoDB, and React. This project enhanced my skills in both frontend and backend development.",
+        "Led the development of a web-based library management system aimed at streamlining the process of managing library resources."
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
+      title: "Hackathon Participant",
+      company_name: "SIH",
+      icon: nodejs,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "september 2024 - october 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Collaborated with a team of developers to analyze and predict price trends of essential commodities.",
+        "Utilized data analysis techniques to derive insights from market intelligence inputs and historical data.",
+        "Developed a simplified model to forecast prices, showcasing my ability to work under pressure and contribute effectively to group projects.",
       ],
     },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
+   
   ];
   
   const testimonials = [

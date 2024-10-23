@@ -13,8 +13,8 @@ const Computers = ({ isMobile }) => {
     <hemisphereLight intensity={6} groundColor='black' />
     <primitive
       object={computer.scene}
-      scale={isMobile ?2 : 3}
-      position={isMobile ? [0, -3, 0] : [0, -3.25, -1.5]}
+      scale={isMobile ?2 : 3.1}
+      position={isMobile ? [0, -3, 0] : [-7, -3.5, -1.5]}
       rotation={[-0.01, -0.2, -0.1]}
     />
   </mesh>
@@ -49,7 +49,7 @@ const ComputersCanvas = () => {
   }, []);
 
    return (
-    <div ref={ref} style={{ height: '500px' }}>
+    <span ref={ref} style={{ height: '500px' }}>
       {inView && (
         <Canvas
           frameloop="demand"
@@ -60,16 +60,18 @@ const ComputersCanvas = () => {
         >
           <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
+            autoRotate
+            autoRotateSpeed={10}
               enableZoom={false}
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
             />
-            \<Computers isMobile={isMobile} />
+            <Computers isMobile={isMobile} />
           </Suspense>
           <Preload all />
         </Canvas>
       )}
-    </div>
+    </span>
   );
 };
 
