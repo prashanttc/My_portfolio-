@@ -15,6 +15,7 @@
     "@react-three/fiber": "^8.17.10",
     "autoprefixer": "^10.4.20",
     "framer-motion": "^11.11.9",
+    "intersection-observer": "^0.12.2",
     "maath": "^0.10.8",
     "postcss": "^8.4.47",
     "react": "^18.3.1",

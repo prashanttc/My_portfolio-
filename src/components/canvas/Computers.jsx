@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { useInView } from "react-intersection-observer"
 
 import CanvasLoader from "../Loader";
 
@@ -21,6 +22,9 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Adjust this threshold based on when you want to trigger rendering
+  });
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -44,24 +48,28 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>  
-      <Preload all />
-    </Canvas>
+   return (
+    <div ref={ref} style={{ height: '500px' }}>
+      {inView && (
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            \<Computers isMobile={isMobile} />
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      )}
+    </div>
   );
 };
 
