@@ -24,11 +24,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-full h-full max-w-[500px] max-h-[500px]">
           <ComputerCanvas />
-        </div>
-      </div>
+  
       <div className="absolute xs:bottom-10 bottom-[20px] w-full flex items-start justify-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] border-secondary rounded-3xl border-2 flex justify-center items-start p-2">
