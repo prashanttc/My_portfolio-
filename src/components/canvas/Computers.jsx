@@ -13,8 +13,8 @@ const Computers = ({ isMobile }) => {
     <spotLight
       position={isMobile ? [-10, 30, 5] : [-10, 10, 0]} // Adjusted positions
       intensity={isMobile ? 0.8 : 1} // Adjusted intensity for mobile
-      castShadow
-      shadow-mapSize={isMobile?528:1024}
+      castShadow ={!isMobile}
+      shadow-mapSize={isMobile?0:1024}
     />
     <pointLight 
       position={isMobile ? [0, 5, 2] : [0, 10, 0]} // Adjusted position for mobile
