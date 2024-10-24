@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import ComputerCanvas from "./canvas/Computers";
+import ComputerCanvas from "./canvas/Computers";;
+import { slideIn } from "../utils/motion";
+import CarCanvas from "./canvas/car";
 // import{ComputerCanvas} from "./canvas/Computers"
 
 const Hero = () => {
@@ -24,7 +26,15 @@ const Hero = () => {
         </div>
       </div>
 
-  <ComputerCanvas />
+<div className="h-screen w-full flex flex-row justify-between">
+<div className="w-[50%]">
+<CarCanvas />
+</div>
+<div className="w-[50%]">
+<ComputerCanvas />
+</div>
+</div>
+
         <div className="absolute xs:bottom-15 bottom-[80px] w-full flex items-start justify-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] border-secondary rounded-3xl border-2 flex justify-center items-start p-2">

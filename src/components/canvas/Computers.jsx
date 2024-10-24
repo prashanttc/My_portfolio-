@@ -6,16 +6,16 @@ import { useInView } from "react-intersection-observer"
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./pony_cartoon.glb");
+  const computer = useGLTF("./fat_batman.glb");
 
   return (
     <mesh>
-    <hemisphereLight intensity={6} groundColor='black' />
+    <hemisphereLight intensity={5} groundColor='black' />
     <primitive
       object={computer.scene}
-      scale={isMobile ?2.1 : 3.1}
-      position={isMobile ? [0, -2, 0] : [-8, -3.5, -2.5]}
-      rotation={[-0.01, -0.2, -0.1]}
+      scale={isMobile ?2.1 : 4.5}
+      position={isMobile ? [0, -5, 0] : [0, -6, 0 ]}
+      rotation={[0, 1, 0]}
     />
   </mesh>
   );
@@ -60,8 +60,6 @@ const ComputersCanvas = () => {
         >
           <Suspense fallback={<CanvasLoader />}>
             <OrbitControls
-            autoRotate={!isMobile}
-            autoRotateSpeed={10}
               enableZoom={false}
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={Math.PI / 2}
