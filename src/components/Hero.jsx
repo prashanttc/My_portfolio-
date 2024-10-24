@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
 
 <div className="h-screen w-full flex flex-row justify-between">
-<div className="w-[50%]">
+<div className="w-[50%] hidden md:flex">
 <CarCanvas />
 </div>
 <div className="w-[50%]">
