@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputerCanvas from "./canvas/Computers";;
-import { slideIn } from "../utils/motion";
 import CarCanvas from "./canvas/car";
 // import{ComputerCanvas} from "./canvas/Computers"
 
@@ -28,7 +27,7 @@ const Hero = () => {
 
 <div className="h-screen w-full flex flex-row justify-between">
 <div className="w-[50%] hidden md:block">
-<CarCanvas />
+{/* <CarCanvas /> */}
 </div>
 <div className="w-[100%] md:w-[50%]">
 <ComputerCanvas />

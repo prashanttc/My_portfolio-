@@ -13,9 +13,10 @@ const Car = ({ isMobile }) => {
     <hemisphereLight intensity={10} groundColor='black' />
     <primitive
       object={car.scene}
-      scale={isMobile ?1 : 1.4}
-      position={isMobile ? [0, -1, 0] : [-0.3, -2, 0 ]}
-      rotation={[-0.3, 0,0 ]}
+      scale={isMobile ?2.1 : 2}
+      position={isMobile ? [0, -2, 0] : [-0.3, -2.5, 0 ]}
+      rotation={[-0.3, 0, 0]}
+
     />
   </mesh>
   );
@@ -52,7 +53,7 @@ const CarCanvas = () => {
     <span ref={ref} style={{ height: '500px' }}>
       {inView && (
         <Canvas
-          frameloop="demand"
+          frameloop="never"
           shadows
           dpr={[1, 2]}
           camera={{ position: [20, 3, 5], fov: 25 }}
