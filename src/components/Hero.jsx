@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputerCanvas from "./canvas/Computers";;
-import CarCanvas from "./canvas/car";
 // import{ComputerCanvas} from "./canvas/Computers"
 
 const Hero = () => {
@@ -16,7 +15,7 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>
-            hi, I'am <span className="text-[#915eff]">Prashant</span>
+            hi, I&apos;am <span className="text-[#915eff]">Prashant</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2  text-white-100`}>
             i develop user interface

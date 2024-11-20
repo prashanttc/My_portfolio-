@@ -1,9 +1,9 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { exlink, github, logo } from "../assets";
+import { exlink, github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";

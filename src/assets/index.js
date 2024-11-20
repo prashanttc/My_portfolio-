@@ -17,7 +17,7 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import twogood from "./twogood.png"
+import onyxcloud from "./onyxcloud.png"
 import food from "./fooddel.png"
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -28,7 +28,7 @@ import hotel from "./hotel.png"
 export {
   logo,
   exlink,
-  twogood,
+  onyxcloud,
   backend,
   mobile,
   web,

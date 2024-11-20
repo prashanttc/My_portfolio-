@@ -12,12 +12,8 @@ import {
     nodejs,
     mongodb,
     git,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
     hotel,
-    twogood,
+    onyxcloud,
     food,
   
   } from "../assets";
@@ -153,30 +149,9 @@ import {
   ];
   
   const projects = [
+
     {
-      name: "hotel booking",
-      description:
-        "Web-based platform that allows users to search, book, and manage hotel's room from various providers , with fully functional admin panel to manage booking.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: hotel,
-      link:"https://anywwhere.netlify.app/",
-      source_code_link: "https://github.com/prashanttc/hbs",
-    },
-    {
-      name: "food delivery",
+      name: "EasyEats",
       description:
         "Web application that enables users to search for restaurant ,order food ,manage their own restaurtan and track order in real time with auth0 authentication and stripe payment.",
       tags: [
@@ -202,27 +177,50 @@ import {
       source_code_link:"https://github.com/prashanttc/food-del",
     },
     {
-      name: "Two good co",
-      link:"https://prashanttc.github.io/two-good-co/",
+      name: "Onyxcloud",
+      link:"https://onyxcloud.vercel.app/",
       description:
-        "A interactive and responsive homepage of a catering service company.",
+        "OnyxCloud is a modern cloud storage platform designed for seamless and secure file storage and sharing. Built with Next.js, Appwrite, and Tailwind CSS, it offers a user-friendly interface with robust features to cater to personal and professional needs..",
       tags: [
         {
-          name: "html",
+          name: "nextjs",
           color: "blue-text-gradient",
         },
         {
-          name: "css",
+          name: "tailwind",
           color: "green-text-gradient",
         },
         {
-          name: "javascript",
+          name: "appwrite",
           color: "pink-text-gradient",
         },
       ],
-      image: twogood,
-      source_code_link: "https://github.com/two-good-co",
+      image: onyxcloud,
+      source_code_link: "https://github.com/prashanttc/Onyxcloud",
     },
+    {
+      name: "Anywhere.com",
+      description:
+        "Web-based platform that allows users to search, book, and manage hotel's room from various providers , with fully functional admin panel to manage booking.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: hotel,
+      link:"https://anywwhere.netlify.app/",
+      source_code_link: "https://github.com/prashanttc/hbs",
+    },
+   
   ];
   
   export { services, technologies, experiences, testimonials, projects };
