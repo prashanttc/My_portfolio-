@@ -24,7 +24,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import hotel from "./hotel.png"
-import lume from "./lume"
+import lume from "./lume.png"
 
 export {
   logo,
