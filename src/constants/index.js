@@ -12,6 +12,7 @@ import {
     nodejs,
     mongodb,
     git,
+    lume,
     hotel,
     onyxcloud,
     food,
@@ -219,6 +220,28 @@ import {
       image: hotel,
       link:"https://anywwhere.netlify.app/",
       source_code_link: "https://github.com/prashanttc/hbs",
+    },
+    {
+      name: "lume",
+      description:
+        "Web-based social media that allows users to post, like, and follow users with infinite scrolling and realtime updates  ",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tanstack",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: lume,
+      link:"https://lume-ten.vercel.app/",
+      source_code_link: "https://github.com/prashanttc/lume",
     },
    
   ];
